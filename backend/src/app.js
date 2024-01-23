@@ -5,15 +5,11 @@ import express  from 'express';
 
 const app =  express();
 
-//app.use (express.json());
 app.get ('/', (req,res) => {
-    res.json ({message: "resp"});
+    res.json ({message: "respuesta del sevidor Registro AIT"});
     
 });
 
-
-
-app.use ("/api/todo", todoRoute)
 
 const PORT = process.env.PORT || 5000;
 app.listen (PORT, () => {
