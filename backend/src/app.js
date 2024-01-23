@@ -1,11 +1,17 @@
 import 'dotenv/config'   
 import express  from 'express';
-import todoRoute from '../routes/todo.route';
+
 
 
 const app =  express();
 
 //app.use (express.json());
+app.get ('/', (req,res) => {
+    res.json ({message: "resp"});
+    
+});
+
+
 
 app.use ("/api/todo", todoRoute)
 
